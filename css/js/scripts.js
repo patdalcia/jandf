@@ -3,7 +3,7 @@ let swiper = new Swiper(".mySwiper", {
 
     loop: "true",
     speed: 600,
-    slidesPerView: '3',
+    slidesPerView: 'auto',
     grabCursor: true,
     centeredSlides: true,
     spaceBetween: 30,
