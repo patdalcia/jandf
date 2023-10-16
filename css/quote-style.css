@@ -1,0 +1,85 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Default anchor tag styling */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+a:hover {
+    cursor: pointer;
+}
+
+:target {
+    display: block;
+    position: relative;
+    top: -15%;
+    visibility: hidden;
+}
+
+/* Body styling */
+html,
+body {
+    position: relative;
+    height: 100%;
+    padding-top: 1%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('./images/Image-96.JPEG');
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+body h1 {
+    font-family: "Lobster", serif;
+    font-size: 6rem;
+    color: red;
+
+    margin-top: 10%;
+}
+
+body h3 {
+    font-family: "Roboto", serif;
+    font-size: 3rem;
+}
+
+body form input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+
+    font-family: "Roboto", serif;
+    font-size: 2rem;
+}
+
+body form input:hover {
+    color: red;
+}

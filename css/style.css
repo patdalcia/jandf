@@ -1,0 +1,627 @@
+/* Import google font (Balsamiq Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Default anchor tag styling */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+a:hover {
+    cursor: pointer;
+}
+
+:target {
+    display: block;
+    position: relative;
+    top: -15%;
+    visibility: hidden;
+}
+
+
+/* Default image styling */
+img {
+    padding: 1rem;
+    max-width: 75%;
+    height: auto;
+}
+
+/* Body styling */
+html,
+body {
+    position: relative;
+    height: 100%;
+    padding-top: 1%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', serif;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+/* HEADER STYLES */
+.headerLinks {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: white;
+    z-index: 2;
+}
+
+.headerLinks div h2 {
+    font-family: "Lobster", serif;
+    color: red;
+}
+
+.headerLinks a {
+    text-decoration: none;
+    color: red;
+    padding-right: 1vw;
+}
+
+.headerLinks a:hover {
+    opacity: 50%;
+}
+
+/* Header, and Sticky Header styles */
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 1.5%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.container.hero {
+    padding-top: 5%;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+    .hero a {
+        background-color: white;
+        background-image: -webkit-linear-gradient(left, green 0%, white 20%, red 40%, transparent 50%);
+        background-position: 100% 0;
+        background-size: 200% 200%;
+        color: transparent;
+        transition: .1s .1s;
+        background-clip: text;
+    }
+
+    .hero a:hover {
+        background-position: 0 0;
+        color: transparent;
+        transition: .1s 0;
+    }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax-container {
+        background-attachment: scroll;
+    }
+}
+
+.container>div {
+    top: 25vh;
+    height: 50vh;
+}
+
+
+div.project_content {
+    padding-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_content h1 {
+    padding: 0.2rem 1rem;
+    font-family: "Lobster", serif;
+    color: red;
+    font-size: 4rem;
+    background-color: #efefef;
+}
+
+.project_content h4 {
+    font-family: 'Roboto', serif;
+    font-size: 1.25rem;
+    background-color: #efefef;
+}
+
+.project_container img {
+    height: 75%;
+}
+
+
+/* Swiper container stylng */
+.swiper {
+    width: 100%;
+    height: 50%;
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-size: 0.8rem;
+}
+
+
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* this is the important part */
+.mySwiper .swiper-slide {
+    width: auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 90%;
+    height: auto;
+    object-fit: scale-down;
+    object-position: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    outline: none;
+}
+
+
+div.swiper-button-next,
+div.swiper-button-prev {
+    top: 50%
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+.mySwiper2 {
+    height: 70%;
+}
+
+/* HERO SECTION STYLES */
+
+.hero {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("./images/Image-51.JPEG");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    font-family: "Lobster", serif;
+    font-size: 3rem;
+    color: white;
+}
+
+/* GALLERY SECTION STYLES */
+
+.gallery {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: none;
+
+    right: 0;
+    left: 0;
+}
+
+div.gallery_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: red;
+}
+
+div.gallery_content h1 {
+    font-family: "Lobster", serif;
+    font-size: 3rem;
+}
+
+.map-section {
+    width: 90%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ABOUT SECTION STYLES */
+
+.about {
+    position: relative;
+    height: 95%;
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: red;
+
+    text-align: center;
+}
+
+.about-content h1 {
+    font-family: "Lobster", serif;
+    font-size: 3rem;
+}
+
+.about-content a {
+    color: white;
+}
+
+.about-content a:hover {
+    color: red;
+}
+
+/* FOOTER SECTION STYLES */
+.footer {
+    height: 20%;
+}
+
+/* SEPERATOR SECTION STYLES */
+.seperator {
+    height: 5%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.t {
+    height: 30%;
+}
+
+/* RESPONSIVE TESTIMONIAL SECTION STYLES */
+#content {
+    width: 100%;
+    margin: auto;
+    color: black;
+    font-size: 1rem;
+}
+
+.testimonial blockquote {
+    margin: 10px 10px 0;
+    background: white;
+    padding: 20px 60px;
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.testimonial blockquote:before,
+.testimonial blockquote:after {
+    content: "\201C";
+    position: absolute;
+    font-size: 3rem;
+    line-height: 1;
+    color: red;
+    font-style: normal;
+}
+
+.testimonial blockquote:before {
+    top: 0;
+    left: 10px;
+}
+
+.testimonial blockquote:after {
+    content: "\201D";
+    right: 10px;
+    bottom: -0.5em;
+}
+
+.testimonial div {
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+    margin: 0 0 0 60px;
+}
+
+.testimonial p {
+    margin: 8px 0 0 20px;
+    text-align: left;
+    font-size: 1.5rem;
+    color: black;
+}
+
+footer {
+    height: 90%;
+    width: 100%;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer>div {
+    width: 40%;
+    height: 70%;
+}
+
+.footer-quote-section {
+    width: 50%;
+    height: 95%;
+
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-right: 1px solid rgba(255, 0, 0, 0.25);
+}
+
+.footer-quote-section div {
+    width: 100%;
+}
+
+.footer-quote-section a {
+    color: rgba(255, 0, 0, 0.75);
+}
+
+.footer-logo h5 {
+    font-family: "Lobster", serif;
+    color: red;
+}
+
+.footer-quote-section div form {
+    width: 100%;
+    height: 50%;
+}
+
+.email-form {
+    width: 90%;
+    border: none;
+}
+
+.email-submit {
+    background-image: url("./images/paper-plane-solid.svg");
+    /* 16px x 16px */
+    background-color: transparent;
+    /* make the button transparent */
+    background-repeat: no-repeat;
+    /* make the background image appear only once */
+    background-position: 0px 0px;
+    /* equivalent to 'top left' */
+    border: none;
+    /* assuming we don't want any borders */
+    cursor: pointer;
+    /* make the cursor like hovering over an <a> element */
+    height: 16px;
+    /* make this the size of your image */
+    padding-left: 16px;
+    /* make text start to the right of the image */
+    vertical-align: middle;
+    /* align the text vertically centered */
+}
+
+.footer-quote-section h1 {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.footer-quote-section form {
+    height: 100%;
+    padding: 1%;
+}
+
+.footer-map-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-social-links {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* CUSTOM INPUT FIELD STYLES */
+textarea:focus,
+input:focus {
+    outline: 0;
+}
+
+/* Question */
+
+input.question,
+textarea.question {
+    font-size: 48px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 80%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+    /* Hack to make "rows" attribute apply in Firefox. */
+}
+
+/* Underline and Placeholder */
+
+input.question+label,
+textarea.question+label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    border-top: 1px solid red;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+}
+
+input.question:focus+label,
+textarea.question:focus+label {
+    width: 80%;
+}
+
+input.question:focus,
+input.question:valid {
+    padding-top: 35px;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+    margin-top: 35px;
+}
+
+input.question:focus+label>span,
+input.question:valid+label>span {
+    top: -100px;
+    font-size: 22px;
+    color: #333;
+}
+
+textarea.question:focus+label>span,
+textarea.question:valid+label>span {
+    top: -150px;
+    font-size: 22px;
+    color: #333;
+}
+
+input.question:valid+label,
+textarea.question:valid+label {
+    border-color: green;
+}
+
+input.question:invalid,
+textarea.question:invalid {
+    box-shadow: none;
+}
+
+input.question+label>span,
+textarea.question+label>span {
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    font-size: 1rem;
+    top: -66px;
+    left: 0px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    display: block;
+    opacity: 0;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #EEE;
+}
+
+input[type="submit"]:active {
+    background: #999;
+}
+
+input.question:valid~input[type="submit"],
+textarea.question:valid~input[type="submit"] {
+    -webkit-animation: appear 1s forwards;
+    animation: appear 1s forwards;
+}
+
+input.question:invalid~input[type="submit"],
+textarea.question:invalid~input[type="submit"] {
+    display: none;
+}
+
+@-webkit-keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}

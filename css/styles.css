@@ -1,0 +1,312 @@
+html,
+body {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    font-family: "Roboto", serif;
+    cursor: none;
+}
+
+body:hover #custom-cursor {
+    opacity: 1;
+}
+
+/*
+    Custome Cursor Styles
+*/
+
+#custom-cursor {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: transform 500ms;
+}
+
+#custom-cursor::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    border: 1px solid white;
+    width: 16px;
+    height: 16px;
+}
+
+#custom-cursor.zoom {
+    transform: scale(3);
+}
+
+/*
+    Hero Section Styles
+*/
+
+.heroCard {
+    background-color: white;
+    height: 90vh;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLinks {
+    width: 100vw;
+    padding-top: 3vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: white;
+}
+
+.headerLinks div h2 {
+    font-family: "Lobster", serif;
+    color: red;
+}
+
+.headerLinks a {
+    text-decoration: none;
+    color: red;
+    padding-right: 1vw;
+}
+
+.headerLinks a:hover {
+    opacity: 50%;
+}
+
+/* Header, and Sticky Header styles */
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.heroCard {
+    padding-top: 10vh;
+}
+
+
+
+.heroContent {
+    background-image: url("./images/Image-51.JPEG");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    height: 80vh;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.heroContent a:hover {
+    color: skyBlue;
+}
+
+@media (-webkit-min-device-pixel-ratio:0) {
+    .heroContent a {
+        background-color: white;
+        background-image: -webkit-linear-gradient(left, green 0%, white 20%, red 40%, transparent 50%);
+        background-position: 100% 0;
+        background-size: 200% 200%;
+        color: transparent;
+        transition: .1s .1s;
+        background-clip: text;
+    }
+
+    .heroContent a:hover {
+        background-position: 0 0;
+        color: transparent;
+        transition: .1s 0;
+    }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax-container {
+        background-attachment: scroll;
+    }
+}
+
+.heroContent div {
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Lobster", serif;
+    font-size: 2em;
+}
+
+
+/*
+    About Section Styles
+*/
+
+.aboutCard {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.aboutCard>div {
+    top: 25vh;
+    height: 50vh;
+}
+
+div.project_content {
+    padding-top: 25vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.aboutCard h1 {
+    font-family: "Lobster", "serif";
+}
+
+.aboutCard h6 {
+    font-family: "Roboto", serif;
+    padding: 2vw;
+}
+
+.swiper {
+    right: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.slide_1 {
+    background-color: #643ca3;
+}
+
+
+.slide_2 {
+    background-color: #e38364;
+}
+
+
+.slide_3 {
+    background-color: #faf47a;
+}
+
+
+.slide_4 {
+    background-color: #64e3c1;
+}
+
+
+.slide_5 {
+    background-color: #9e6ffd;
+}
+
+
+
+/*
+    Gallery Section Styles
+*/
+
+.galleryCard {
+    height: 80vh;
+    justify-content: space-around;
+
+    padding: 6rem 0;
+    background-image: url("./images/Image-59.JPEG");
+    background-position: top;
+    gap: 1.6em;
+}
+
+/*
+    Buffer Style
+*/
+.buffer {
+    width: 100%;
+    min-height: 5vh;
+    background-color: var(--color);
+}
+
+/*
+    Responsive testimonial styles
+*/
+#content {
+    width: 100%;
+    margin: 25vh auto;
+}
+
+.testimonial blockquote {
+    margin: 10px 10px 0;
+    background: #efefef;
+    padding: 1vh 1.5vw;
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.testimonial blockquote:before,
+.testimonial blockquote:after {
+    content: "\201C";
+    position: absolute;
+    font-size: 3em;
+    line-height: 1;
+    color: #757f9a;
+    font-style: normal;
+}
+
+.testimonial blockquote:before {
+    top: 0;
+    left: 0.5vw;
+}
+
+.testimonial blockquote:after {
+    content: "\201D";
+    right: 0.5vw;
+    bottom: -0.5em;
+}
+
+.testimonial div {
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #efefef;
+    margin: 0 0 0 60px;
+}
+
+.testimonial p {
+    margin: 8px 0 0 20px;
+    text-align: left;
+    color: black;
+}
